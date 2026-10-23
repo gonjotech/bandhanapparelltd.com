@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandhan Apparel Ltd. | Premium Export-Oriented RMG Manufacturer</title>
+    <meta name="description" content="Bandhan Apparel Ltd. is a 100% export-oriented ready-made garment manufacturer in Dhaka, Bangladesh, producing premium Knitwear, Denim, Woven Bottoms, Outerwear, Activewear, and Kids' apparel for global brands.">
+    
+    <!-- Google Fonts & Font Awesome CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            /* Authentic Bandhan Apparel Brand Colors */
+            --primary: #003366;
+            --primary-dark: #002244;
+            --accent: #00aaff;
+            --accent-hover: #0088cc;
+            --light: #f0f8ff;
+            --dark: #1a1a1a;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --border: #e2e8f0;
+            --green: #2e8b57;
+            --success: #10b981;
+            --card-radius: 20px;
+            --transition: all 0.35s ease;
+            --shadow-card: 0 10px 30px rgba(0, 51, 102, 0.08);
+            --shadow-hover: 0 18px 40px rgba(0, 51, 102, 0.16);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Top Notification Bar */
+        .top-bar {
+            background: var(--primary-dark);
+            color: #d0e7ff;
+            font-size: 13px;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-bar-left span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .top-bar-right a {
+            color: #d0e7ff;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .top-bar-right a:hover {
+            color: var(--accent);
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 5%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            box-shadow: 0 4px 25px rgba(0, 51, 102, 0.08);
+            transition: var(--transition);
+        }
+
+        nav .logo {
+            font-size: 23px;
+            font-weight: 900;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        nav .logo img {
+            height: 46px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        nav .logo-sub {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: block;
+        }
+
+        nav .menu {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        nav a.nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            padding: 6px 0;
+            position: relative;
+        }
+
+        nav a.nav-link:hover {
+            color: var(--accent);
+        }
+
+        nav a.nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        nav a.nav-link:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn-nav {
+            background: var(--accent);
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14.5px;
+            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.35);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-btn-nav:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 102, 0.25);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section (Original Full-Width Background Slider with Classic Vibe) */
+        .hero {
+            position: relative;
+            height: 85vh;
+            min-height: 580px;
+            overflow: hidden;
+            background: #001f3f;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 7s ease-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 51, 102, 0.72) 0%, rgba(0, 30, 60, 0.85) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 25px;
+            z-index: 2;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 170, 255, 0.2);
+            border: 1px solid rgba(0, 170, 255, 0.5);
+            color: #dff2ff;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 13.5px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-overlay h1 {
+            font-size: 54px;
+            font-weight: 900;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-overlay h1 span {
+            color: var(--accent);
+        }
+
+        .hero-overlay p {
+            font-size: 21px;
+            margin-bottom: 30px;
+            max-width: 860px;
+            line-height: 1.55;
+            color: #e2eeff;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+        }
+
+        .hero-pills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 35px;
+        }
+
+        .hero-pill-item {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-pill-item i {
+            color: var(--accent);
+        }
+
+        .hero-btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: white;
+            padding: 13px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            box-shadow: 0 6px 20px rgba(0, 170, 255, 0.4);
+        }
+
+        .cta-btn:hover {
+            background: #ffffff;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-btn-outline {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            padding: 13px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            backdrop-filter: blur(8px);
+        }
+
+        .cta-btn-outline:hover {
+            background: #ffffff;
+            color: var(--primary);
+            border-color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* Slider Controls */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 51, 102, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .slider-arrow:hover {
+            background: var(--accent);
+            color: #ffffff;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-arrow.prev { left: 25px; }
+        .slider-arrow.next { right: 25px; }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 25px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-dot.active {
+            width: 32px;
+            border-radius: 10px;
+            background: var(--accent);
+        }
+
+        /* Stats Strip */
+        .stats-strip {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 51, 102, 0.06);
+            padding: 30px 5%;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid var(--border);
+            padding: 10px;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-num {
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .stat-num span {
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Generic Section Styles */
+        .section {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 50px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(0, 170, 255, 0.12);
+            color: var(--accent);
+            padding: 5px 16px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section h2 {
+            font-size: 40px;
+            text-align: center;
+            color: var(--primary);
+            font-weight: 900;
+            letter-spacing: -0.8px;
+            margin-bottom: 16px;
+        }
+
+        .section-p {
+            text-align: center;
+            max-width: 880px;
+            margin: auto;
+            font-size: 17.5px;
+            color: var(--gray);
+            line-height: 1.65;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 51, 102, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card img {
+            border-radius: 14px;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* Valued Buyers Section (With Tam Fashion Malaysia & Place Dubai) */
+        .buyers-section {
+            background: #ffffff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .buyers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .buyer-card {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: var(--card-radius);
+            padding: 30px 22px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .buyer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+            background: #ffffff;
+        }
+
+        .buyer-flag {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .buyer-name {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .buyer-country {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .buyer-desc {
+            font-size: 13.5px;
+            color: var(--gray);
+            line-height: 1.45;
+        }
+
+        .buyer-tag {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(0, 170, 255, 0.15);
+            color: var(--primary);
+            font-size: 10.5px;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Products Section & Filter */
+        .product-filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-pill {
+            background: white;
+            border: 1.5px solid var(--border);
+            color: var(--dark);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-pill:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .filter-pill.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.25);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .product-thumb {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background: #e2e8f0;
+        }
+
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-thumb img {
+            transform: scale(1.06);
+        }
+
+        .prod-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(0, 51, 102, 0.88);
+            backdrop-filter: blur(8px);
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-info {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-info h3 {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.35;
+        }
+
+        .spec-list {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13.5px;
+            padding: 6px 0;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+
+        .spec-item span:first-child {
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .spec-item span:last-child {
+            color: var(--dark);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-view-specs {
+            flex: 1;
+            background: var(--light);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            padding: 10px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-view-specs:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-inquire-prod {
+            flex: 1;
+            background: var(--accent);
+            color: white;
+            border: 1px solid var(--accent);
+            padding: 10px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-inquire-prod:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Production & Machinery Section */
+        .production-bg {
+            background: #ffffff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .infra-card {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            transition: var(--transition);
+        }
+
+        .infra-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+            background: #ffffff;
+        }
+
+        .infra-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 14px;
+            background: rgba(0, 170, 255, 0.15);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .infra-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .infra-desc {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.55;
+            margin-bottom: 16px;
+        }
+
+        .infra-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .infra-features li {
+            font-size: 13px;
+            color: var(--dark);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .infra-features li i {
+            color: var(--green);
+        }
+
+        /* Quality Protocol Section */
+        .qa-box {
+            background: white;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-card);
+            padding: 40px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .qa-item-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .qa-item {
+            background: var(--light);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .qa-item h4 {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .qa-item h4 i {
+            color: var(--accent);
+        }
+
+        .qa-item p {
+            font-size: 12.5px;
+            color: var(--gray);
+            line-height: 1.4;
+        }
+
+        .qa-banner-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        /* Management Leadership Team */
+        .management-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 51, 102, 0.05);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid var(--accent);
+            box-shadow: 0 8px 20px rgba(0, 51, 102, 0.12);
+        }
+
+        .team-card h3 {
+            font-size: 21px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: var(--primary);
+        }
+
+        .team-card p.position {
+            font-size: 15px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-card p.contact {
+            color: var(--gray);
+            font-size: 13.5px;
+            margin-bottom: 6px;
+        }
+
+        .team-card .contact-icon {
+            color: var(--accent);
+            margin-right: 6px;
+        }
+
+        /* Careers Section */
+        .career-bg {
+            background: #ffffff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .openings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .job-card {
+            background: var(--light);
+            padding: 26px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            border-left: 5px solid var(--accent);
+        }
+
+        .job-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            background: #ffffff;
+        }
+
+        .job-card h3 {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .job-card .location {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        .job-card ul {
+            list-style: none;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .job-card ul li {
+            position: relative;
+            padding-left: 22px;
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .job-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .apply-btn {
+            background: var(--accent);
+            color: white;
+            padding: 10px 26px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 14px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .apply-btn:hover {
+            background: var(--primary);
+        }
+
+        /* Sustainability Section */
+        .sustainability-bg {
+            background: #e8f5e9;
+        }
+
+        .sustainability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .sustain-card {
+            background: white;
+            padding: 26px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-card);
+            text-align: left;
+            transition: var(--transition);
+        }
+
+        .sustain-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .sustain-card h3 {
+            font-size: 20px;
+            color: var(--green);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .sustain-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .certifications-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .cert-badge-pill {
+            background: #ffffff;
+            border: 1px solid #c8e6c9;
+            color: #2e7d32;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* RFQ Section (Submit Tech Pack) */
+        .rfq-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #001f3f 100%);
+            color: white;
+            padding: 85px 5%;
+        }
+
+        .rfq-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .rfq-info h2 {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 18px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .rfq-info h2 span {
+            color: var(--accent);
+        }
+
+        .rfq-info p {
+            font-size: 16.5px;
+            color: #d0e7ff;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .rfq-feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .rfq-feat {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .rfq-feat-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(0, 170, 255, 0.2);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .rfq-feat-text h4 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .rfq-feat-text p {
+            font-size: 13px;
+            color: #b0d4ff;
+            margin-bottom: 0;
+        }
+
+        .rfq-form-card {
+            background: white;
+            color: var(--dark);
+            border-radius: var(--card-radius);
+            padding: 38px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+        }
+
+        .rfq-form-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .rfq-form-card p.sub {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 22px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 14px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 14px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 11px 15px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 14px;
+            background: var(--light);
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.15);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 85px;
+        }
+
+        .btn-submit-rfq {
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 13px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.35);
+        }
+
+        .btn-submit-rfq:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 5% 30px;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer p {
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 25px 0;
+            font-size: 20px;
+        }
+
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: white;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1) translateY(-3px);
+            color: white;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 51, 102, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            width: 100%;
+            max-width: 680px;
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            animation: modalIn 0.3s ease;
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 28px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 22px;
+        }
+
+        .modal-table th, .modal-table td {
+            padding: 11px 14px;
+            font-size: 13.5px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .modal-table th {
+            background: var(--light);
+            color: var(--primary);
+            font-weight: 700;
+            width: 38%;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero { height: 75vh; }
+            .hero-overlay h1 { font-size: 42px; }
+            .section { padding: 60px 5%; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .stat-item:nth-child(3) { border-right: none; }
+            .qa-box { grid-template-columns: 1fr; }
+            .rfq-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .hamburger { display: flex; }
+            nav .menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 15px 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            nav .menu.active {
+                max-height: 600px;
+                overflow-y: auto;
+            }
+            nav .menu a {
+                padding: 12px 5%;
+                text-align: center;
+                border-bottom: 1px solid #eee;
+                font-size: 16px;
+                width: 100%;
+            }
+            .hero-overlay h1 { font-size: 34px; }
+            .hero-overlay p { font-size: 17px; }
+            .hero-pills { display: none; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+            .form-row { grid-template-columns: 1fr; }
+            .slider-arrow { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-overlay h1 { font-size: 28px; }
+            .hero-overlay p { font-size: 15px; }
+            .section h2 { font-size: 28px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <span><i class="fa-solid fa-location-dot"></i> Mirpur-14, Dhaka, Bangladesh</span>
+            <span><i class="fa-solid fa-certificate"></i> 100% Export-Oriented RMG Factory</span>
+            <span><i class="fa-solid fa-clock"></i> Quick Sampling: 7–10 Days</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="tel:+8801601228017"><i class="fa-solid fa-phone"></i> +88 01601-228017</a>
+            <a href="mailto:bandhanapparelltd@gmail.com"><i class="fa-solid fa-envelope"></i> bandhanapparelltd@gmail.com</a>
+            <a href="https://wa.me/8801601228017" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="logo">
+            <img src="bandhan logo.jpg" alt="Bandhan Apparel Ltd Logo">
+            <div>
+                Bandhan Apparel Ltd.
+                <span class="logo-sub">Export RMG Manufacturer</span>
+            </div>
+        </a>
+
+        <div class="hamburger" onclick="toggleMenu()" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu" id="navMenu">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#buyers" class="nav-link">Buyers</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#production" class="nav-link">Production</a>
+            <a href="#quality" class="nav-link">Quality</a>
+            <a href="#management" class="nav-link">Management</a>
+            <a href="#sustainability" class="nav-link">Sustainability</a>
+            <a href="#careers" class="nav-link">Careers</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#rfq" class="cta-btn-nav"><i class="fa-solid fa-paper-plane"></i> Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Full-Width Original Picture Slider with Authentic Vibe) -->
+    <section class="hero" id="home">
+        <!-- Original Picture 1: Denim -->
+        <div class="hero-slide active" style="background-image:url('https://lsco.scene7.com/is/image/lsco/A32220000-front-pdp?$onmodelfront$');"></div>
+        <!-- Original Picture 2: Fleece -->
+        <div class="hero-slide" style="background-image:url('https://media.gq.com/photos/691dfb23d281c11f675b0e2d/4:3/w_1500,h_1125,c_limit/Fleece-art.jpg');"></div>
+        <!-- Original Picture 3: Bangladesh Garment Factory Floor -->
+        <div class="hero-slide" style="background-image:url('https://fastly.restofworld.org/uploads/2025/03/2025-BangladeshFactory-Papri-Header.jpg?width=800&dpr=2&crop=16:9');"></div>
+        <!-- Original Picture 4: Denim & Twill Jacket -->
+        <div class="hero-slide" style="background-image:url('https://shopduer.com/cdn/shop/files/jacket-thumb.jpg?v=1728325080&width=5760');"></div>
+
+        <div class="hero-overlay">
+            <div class="hero-badge-pill">
+                <i class="fa-solid fa-award"></i> 100% Export-Oriented RMG Manufacturer • Bangladesh
+            </div>
+            <h1>Bandhan Apparel Ltd.</h1>
+            <p>Premium Export-Oriented Ready-Made Garments Manufacturer from Bangladesh specializing in high-quality Denim, Trousers, Jackets, Fleece, Shorts & Knitwear.</p>
+
+            <div class="hero-pills">
+                <span class="hero-pill-item"><i class="fa-solid fa-layer-group"></i> 40,000–50,000 Pcs/Mo</span>
+                <span class="hero-pill-item"><i class="fa-solid fa-shield-halved"></i> AQL 1.5/2.5 Standard</span>
+                <span class="hero-pill-item"><i class="fa-solid fa-stopwatch"></i> 7–10 Days Sampling</span>
+                <span class="hero-pill-item"><i class="fa-solid fa-earth-americas"></i> Malaysia • Dubai • India • Global</span>
+            </div>
+
+            <div class="hero-btn-group">
+                <a href="#rfq" class="cta-btn">
+                    <i class="fa-solid fa-envelope-open-text"></i> Get Quote Today
+                </a>
+                <a href="#products" class="cta-btn-outline">
+                    <i class="fa-solid fa-shirt"></i> Explore Products
+                </a>
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="slider-dot active" onclick="setSlide(0)"></span>
+                <span class="slider-dot" onclick="setSlide(1)"></span>
+                <span class="slider-dot" onclick="setSlide(2)"></span>
+                <span class="slider-dot" onclick="setSlide(3)"></span>
+            </div>
+
+            <!-- Slider Arrows -->
+            <div class="slider-arrow prev" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="slider-arrow next" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </section>
+
+    <!-- Key Stats Strip -->
+    <div class="stats-strip">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-num">50K<span>+</span></div>
+                <div class="stat-label">Pcs Monthly Output</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">100<span>+</span></div>
+                <div class="stat-label">Skilled RMG Artisans</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">4,000<span>+</span></div>
+                <div class="stat-label">Sq Ft Master Floor</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">AQL<span>1.5</span></div>
+                <div class="stat-label">Strict Quality Standard</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">100<span>%</span></div>
+                <div class="stat-label">On-Time Global Delivery</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <span class="section-tag">About Bandhan Apparel</span>
+            <h2>About Us</h2>
+            <p class="section-p">
+                We are a 100% export-oriented RMG factory specializing in high-quality trousers, denim, jackets, fleece, shorts, and activewear.
+                With modern facilities, ethical labor practices, and a steadfast commitment to sustainability, we deliver manufacturing excellence to international buyers worldwide.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="infra-icon" style="margin:0 auto 15px;"><i class="fa-solid fa-ruler-combined"></i></div>
+                <h3 style="font-size:20px;color:var(--primary);margin-bottom:8px;font-weight:800;">Fast-Track Sampling</h3>
+                <p style="color:var(--gray);font-size:14.5px;">In-house CAD pattern drafting and dedicated sample lines ensuring proto-samples in 7–10 working days.</p>
+            </div>
+            <div class="card">
+                <div class="infra-icon" style="margin:0 auto 15px;"><i class="fa-solid fa-industry"></i></div>
+                <h3 style="font-size:20px;color:var(--primary);margin-bottom:8px;font-weight:800;">Precision Manufacturing</h3>
+                <p style="color:var(--gray);font-size:14.5px;">Direct-drive Japanese Juki, Brother & Pegasus sewing machines ensuring consistent stitch density and high line balancing.</p>
+            </div>
+            <div class="card">
+                <div class="infra-icon" style="margin:0 auto 15px;"><i class="fa-solid fa-leaf"></i></div>
+                <h3 style="font-size:20px;color:var(--primary);margin-bottom:8px;font-weight:800;">Ethical & Sustainable</h3>
+                <p style="color:var(--gray);font-size:14.5px;">Fair wages, safe working environment, solar transition planning, and certified organic/recycled fabric capabilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valued Buyers Section (Featuring Tam Fashion Malaysia & Place Dubai) -->
+    <section id="buyers" class="section buyers-section">
+        <div class="section-header">
+            <span class="section-tag">Global Portfolio</span>
+            <h2>Our Valued Buyers & Global Partners</h2>
+            <p class="section-p">
+                We proudly supply to leading international fashion retailers and brands in Malaysia, Dubai (UAE), India, and Bangladesh.
+                Trusted for uncompromised quality, competitive FOB costing, and ethical manufacturing.
+            </p>
+        </div>
+
+        <div class="buyers-grid">
+            <!-- Tam Fashion - Malaysia -->
+            <div class="buyer-card">
+                <span class="buyer-tag">Featured Buyer</span>
+                <div class="buyer-flag">🇲🇾</div>
+                <h3 class="buyer-name">Tam Fashion</h3>
+                <div class="buyer-country">Malaysia</div>
+                <p class="buyer-desc">Fashion-forward retail collections, casual bottoms, lightweight denim, and premium knitwear for Southeast Asia.</p>
+            </div>
+
+            <!-- Place - Dubai -->
+            <div class="buyer-card">
+                <span class="buyer-tag">Featured Buyer</span>
+                <div class="buyer-flag">🇦🇪</div>
+                <h3 class="buyer-name">Place</h3>
+                <div class="buyer-country">Dubai, UAE</div>
+                <p class="buyer-desc">Prominent retail chain in the Middle East; producing high-grade children's apparel, casual shorts, and comfort denim.</p>
+            </div>
+
+            <!-- HOLYSTICH (Babyhug) - India -->
+            <div class="buyer-card">
+                <div class="buyer-flag">🇮🇳</div>
+                <h3 class="buyer-name">HOLYSTICH</h3>
+                <div class="buyer-country">Babyhug — India</div>
+                <p class="buyer-desc">Supplying soft baby rompers, toddler fleece sets, and organic cotton essentials for India's largest kidswear ecosystem.</p>
+            </div>
+
+            <!-- CORTIGI - India -->
+            <div class="buyer-card">
+                <div class="buyer-flag">🇮🇳</div>
+                <h3 class="buyer-name">CORTIGI</h3>
+                <div class="buyer-country">India</div>
+                <p class="buyer-desc">Specialized enzyme & stone-washed denim jeans, twill cargo trousers, and youth casual outerwear.</p>
+            </div>
+
+            <!-- WINNER - Bangladesh -->
+            <div class="buyer-card">
+                <div class="buyer-flag">🇧🇩</div>
+                <h3 class="buyer-name">WINNER</h3>
+                <div class="buyer-country">Bangladesh</div>
+                <p class="buyer-desc">Fast-moving domestic lifestyle apparel, heavy fleece hoodies, graphic tees, and stretch chinos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Product Taxonomy & Interactive Catalog -->
+    <section id="products" class="section" style="background:#fff;border-bottom:1px solid var(--border);">
+        <div class="section-header">
+            <span class="section-tag">Product Catalog</span>
+            <h2>Our Premium RMG Products</h2>
+            <p class="section-p">
+                We manufacture across all major apparel divisions with genuine technical RMG expertise. Filter items below or click <strong>View Tech Specs</strong> for detailed fabrication, GSM, and wash specifications.
+            </p>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="product-filter-bar">
+            <button class="filter-pill active" onclick="filterCategory('all', this)"><i class="fa-solid fa-border-all"></i> All Items</button>
+            <button class="filter-pill" onclick="filterCategory('denim', this)"><i class="fa-solid fa-cubes-stacked"></i> Denim & Bottoms</button>
+            <button class="filter-pill" onclick="filterCategory('knitwear', this)"><i class="fa-solid fa-shirt"></i> Knitwear & Polos</button>
+            <button class="filter-pill" onclick="filterCategory('woven', this)"><i class="fa-solid fa-scissors"></i> Woven Shirts & Tops</button>
+            <button class="filter-pill" onclick="filterCategory('outerwear', this)"><i class="fa-solid fa-vest"></i> Outerwear & Fleece</button>
+            <button class="filter-pill" onclick="filterCategory('activewear', this)"><i class="fa-solid fa-person-running"></i> Activewear</button>
+            <button class="filter-pill" onclick="filterCategory('kids', this)"><i class="fa-solid fa-baby"></i> Kids & Infant</button>
+            <button class="filter-pill" onclick="filterCategory('workwear', this)"><i class="fa-solid fa-helmet-safety"></i> Workwear</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+            
+            <!-- Item 1: Denim Trousers (Original Picture) -->
+            <div class="product-card" data-category="denim">
+                <div class="product-thumb">
+                    <img src="https://lsco.scene7.com/is/image/lsco/A32220000-front-pdp?$onmodelfront$" alt="Denim Trousers">
+                    <span class="prod-badge">Denim Division</span>
+                </div>
+                <div class="product-info">
+                    <h3>Denim & Non-Denim Trousers</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>98% Cotton, 2% Spandex Ring Denim</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>12.50 – 13.50 Oz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Washes:</span>
+                            <span>Enzyme Stone, Whisker, Tinting</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('denim-mens')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Denim & Non-Denim Trousers', 'Denim & Bottoms')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Twill & Denim Jacket (Original Picture) -->
+            <div class="product-card" data-category="denim">
+                <div class="product-thumb">
+                    <img src="https://shopduer.com/cdn/shop/files/jacket-thumb.jpg?v=1728325080&width=5760" alt="Denim & Twill Jackets">
+                    <span class="prod-badge">Denim Outerwear</span>
+                </div>
+                <div class="product-info">
+                    <h3>Denim & Twill Jackets</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>100% Rigid Ring Denim / Twill</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>13.50 – 14.50 Oz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Finishing:</span>
+                            <span>Acid Wash, Mid-Stone, Raw Rigid</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('denim-jacket')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Denim & Twill Jackets', 'Denim & Bottoms')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Fleece & Hoodies (Original Picture) -->
+            <div class="product-card" data-category="outerwear">
+                <div class="product-thumb">
+                    <img src="https://media.gq.com/photos/691dfb23d281c11f675b0e2d/4:3/w_1500,h_1125,c_limit/Fleece-art.jpg" alt="Fleece & Hoodies">
+                    <span class="prod-badge">Outerwear / Fleece</span>
+                </div>
+                <div class="product-info">
+                    <h3>Fleece & Heavy Hoodies</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>80% Combed Cotton, 20% Polyester</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>320 – 360 GSM Brushed Fleece</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Finishing:</span>
+                            <span>Silicone Peach Finish, Anti-Pilling</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('fleece-hoodie')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Fleece & Heavy Hoodies', 'Outerwear & Fleece')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Jogging & Pajama Sets (Original Picture) -->
+            <div class="product-card" data-category="activewear">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?w=800" alt="Jogging & Pajama Sets">
+                    <span class="prod-badge">Activewear / Lounge</span>
+                </div>
+                <div class="product-info">
+                    <h3>Jogging & Pajama Sets</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>100% French Terry / Cotton Spandex</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>240 – 280 GSM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Waistband:</span>
+                            <span>Encased Elastic with Drawcord</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('jogging-set')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Jogging & Pajama Sets', 'Activewear')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5: Pique Polo Shirt -->
+            <div class="product-card" data-category="knitwear">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=800&auto=format&fit=crop" alt="Classic Pique Polo Shirt">
+                    <span class="prod-badge">Knitwear</span>
+                </div>
+                <div class="product-info">
+                    <h3>Mercerized Pique Polo Shirt</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>100% Combed Compact Cotton Pique</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>220 – 240 GSM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Collar / Cuff:</span>
+                            <span>1x1 Jacquard Anti-Curl Rib</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('polo-shirt')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Mercerized Pique Polo Shirt', 'Knitwear & Polos')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6: Stretch Chino Pants -->
+            <div class="product-card" data-category="denim">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=800&auto=format&fit=crop" alt="Stretch Chino Pants">
+                    <span class="prod-badge">Woven Bottoms</span>
+                </div>
+                <div class="product-info">
+                    <h3>Stretch Twill Chino Trousers</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>98% Combed Cotton, 2% Elastane Twill</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>240 – 260 GSM (7.5 Oz)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Wash:</span>
+                            <span>Garment Enzyme Wash, Soft Peach</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('chino-pants')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Stretch Twill Chino Trousers', 'Denim & Bottoms')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7: Woven Flannel Plaid Shirt -->
+            <div class="product-card" data-category="woven">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=800&auto=format&fit=crop" alt="Yarn-Dyed Plaid Flannel Casual Shirt">
+                    <span class="prod-badge">Woven Tops</span>
+                </div>
+                <div class="product-info">
+                    <h3>Yarn-Dyed Plaid Flannel Shirt</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>100% Cotton Double-Brushed Flannel</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>175 – 195 GSM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Pattern:</span>
+                            <span>Custom Plaid / Tartan Pattern Match</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('flannel-shirt')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Yarn-Dyed Plaid Flannel Shirt', 'Woven Shirts & Tops')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8: Baby Romper & Sleepsuit -->
+            <div class="product-card" data-category="kids">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?q=80&w=800&auto=format&fit=crop" alt="Baby Rompers">
+                    <span class="prod-badge">Kids & Infant</span>
+                </div>
+                <div class="product-info">
+                    <h3>Organic Cotton Baby Rompers</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>100% GOTS Certified Organic Cotton</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>180 – 200 GSM Interlock</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Safety:</span>
+                            <span>Nickel-Free Snaps, Oeko-Tex Class 1</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('baby-romper')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Organic Cotton Baby Rompers', 'Kids & Infant Wear')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 9: Heavy Duty Workwear -->
+            <div class="product-card" data-category="workwear">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop" alt="Workwear Cargo Trousers">
+                    <span class="prod-badge">Workwear / Utility</span>
+                </div>
+                <div class="product-info">
+                    <h3>Industrial Cargo Workwear</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>65% Polyester, 35% Cotton Heavy Drill</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>290 – 310 GSM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Reinforce:</span>
+                            <span>Cordura Knee Pockets, Triple Stitched</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('workwear-cargo')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Industrial Cargo Workwear', 'Workwear')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 10: Combed Cotton Crewneck T-Shirt -->
+            <div class="product-card" data-category="knitwear">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop" alt="Cotton Crewneck T-Shirt">
+                    <span class="prod-badge">Knitwear</span>
+                </div>
+                <div class="product-info">
+                    <h3>Combed Cotton Crewneck Tee</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>100% Ring-Spun Cotton Jersey</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>160 – 180 GSM (Bio-Washed)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Neck Rib:</span>
+                            <span>1x1 Cotton-Spandex Rib with tape</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('crewneck-tee')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Combed Cotton Crewneck Tee', 'Knitwear & Polos')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 11: Women's High-Rise Jeans -->
+            <div class="product-card" data-category="denim">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop" alt="Women's High Rise Stretch Jeans">
+                    <span class="prod-badge">Denim Division</span>
+                </div>
+                <div class="product-info">
+                    <h3>Women's Sculpt Stretch Jeans</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Fabrication:</span>
+                            <span>85% Cotton, 13% Modal, 2% Elastane</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span>11.00 – 11.75 Oz Super Stretch</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Wash:</span>
+                            <span>Laser Whiskers, Eco-Ozone Wash</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('denim-womens')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Women\'s Sculpt Stretch Jeans', 'Denim & Bottoms')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 12: Packable Quilted Puffer Jacket -->
+            <div class="product-card" data-category="outerwear">
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=800&auto=format&fit=crop" alt="Lightweight Quilted Puffer Jacket">
+                    <span class="prod-badge">Outerwear</span>
+                </div>
+                <div class="product-info">
+                    <h3>Lightweight Packable Puffer</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span>Shell Material:</span>
+                            <span>100% Recycled Nylon Taffeta (DWR)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Insulation:</span>
+                            <span>120 GSM Faux-Down Synthetic Fill</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Features:</span>
+                            <span>Windproof, Water-repellent, YKK Zip</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-view-specs" onclick="openSpecs('puffer-jacket')"><i class="fa-solid fa-circle-info"></i> Tech Specs</button>
+                        <button class="btn-inquire-prod" onclick="inquireProduct('Lightweight Packable Puffer', 'Outerwear & Fleece')"><i class="fa-solid fa-envelope"></i> Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- State-of-the-Art Production & Machinery (With Original Pictures) -->
+    <section id="production" class="section production-bg">
+        <div class="section-header">
+            <span class="section-tag">Factory Infrastructure</span>
+            <h2>State-of-the-Art Production</h2>
+            <p class="section-p">Our modern facility is built with Japanese and European sewing and cutting technologies to meet demanding international tolerances.</p>
+        </div>
+
+        <div class="grid" style="margin-bottom:45px;">
+            <div class="card">
+                <img src="https://img.freepik.com/premium-photo/interior-workshop-sewing-clothes-textiles-portrait-professional-seamstress_620624-1766.jpg" alt="Modern Factory Workshop">
+                <h3 style="font-size:20px;color:var(--primary);margin-bottom:6px;font-weight:800;">Modern Facility</h3>
+                <p style="color:var(--gray);">4,000 Sq Ft with 100+ skilled artisans and technicians</p>
+            </div>
+            <div class="card">
+                <img src="https://c8.alamy.com/comp/PK3EEC/a-garment-worker-at-work-on-a-sewing-machine-inside-a-garment-factory-in-bangladesh-PK3EEC.jpg" alt="Sewing Line in Bangladesh">
+                <h3 style="font-size:20px;color:var(--primary);margin-bottom:6px;font-weight:800;">Master Production Lines</h3>
+                <p style="color:var(--gray);">Integrated Master lines with Juki & Pegasus automated machines</p>
+            </div>
+            <div class="card">
+                <img src="https://fastly.restofworld.org/uploads/2025/03/2025-BangladeshFactory-Papri-Header.jpg?width=800&dpr=2&crop=16:9" alt="Production Capacity">
+                <h3 style="font-size:20px;color:var(--primary);margin-bottom:6px;font-weight:800;">Production Capacity</h3>
+                <p style="color:var(--gray);">40,000 – 50,000 pcs/month with on-time shipment track record</p>
+            </div>
+        </div>
+
+        <div class="infra-grid">
+            <div class="infra-card">
+                <div class="infra-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h4 class="infra-title">CAD, Pattern & Marker Section</h4>
+                <p class="infra-desc">Digital precision pattern drafting and grading system ensuring 88%+ marker efficiency.</p>
+                <ul class="infra-features">
+                    <li><i class="fa-solid fa-check"></i> Gerber & Lectra compatibility</li>
+                    <li><i class="fa-solid fa-check"></i> High-speed automated inkjet plotters</li>
+                </ul>
+            </div>
+            <div class="infra-card">
+                <div class="infra-icon"><i class="fa-solid fa-scissors"></i></div>
+                <h4 class="infra-title">Spreading & Cutting Division</h4>
+                <p class="infra-desc">Manual and semi-automatic spreading tables with laser guide lights and band-knife trimming.</p>
+                <ul class="infra-features">
+                    <li><i class="fa-solid fa-check"></i> EastMan style straight-knife cutters</li>
+                    <li><i class="fa-solid fa-check"></i> 100% ply numbering & shading check</li>
+                </ul>
+            </div>
+            <div class="infra-card">
+                <div class="infra-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                <h4 class="infra-title">Finishing & Needle Detection</h4>
+                <p class="infra-desc">Hashima 0.8mm calibrated needle detector, vacuum suction ironing, and barcode tagging.</p>
+                <ul class="infra-features">
+                    <li><i class="fa-solid fa-check"></i> 100% Metal detector safety check</li>
+                    <li><i class="fa-solid fa-check"></i> Industrial steam boiler pressing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Assurance & AQL Protocol -->
+    <section id="quality" class="section">
+        <div class="section-header">
+            <span class="section-tag">Quality Protocol</span>
+            <h2>AQL 1.5 / 2.5 Quality Assurance Protocol</h2>
+            <p class="section-p">Quality is inspected at each stage from raw fabric arrival to pre-shipment container sealing.</p>
+        </div>
+
+        <div class="qa-box">
+            <div>
+                <h3 style="font-size:26px;color:var(--primary);font-weight:900;margin-bottom:12px;">Zero-Defect Commitment</h3>
+                <p style="color:var(--gray);font-size:15px;line-height:1.6;">
+                    Every buyer shipment is audited under international AQL 1.5 / 2.5 criteria. Our quality control team operates independently of production targets to safeguard garment integrity.
+                </p>
+
+                <div class="qa-item-grid">
+                    <div class="qa-item">
+                        <h4><i class="fa-solid fa-ruler"></i> 4-Point System</h4>
+                        <p>100% incoming fabric rolls checked for weaving faults and color shading.</p>
+                    </div>
+                    <div class="qa-item">
+                        <h4><i class="fa-solid fa-traffic-light"></i> In-Line QC</h4>
+                        <p>Real-time traffic-light audit per workstation to catch stitch flaws instantly.</p>
+                    </div>
+                    <div class="qa-item">
+                        <h4><i class="fa-solid fa-vial-circle-check"></i> In-House Lab</h4>
+                        <p>Shrinkage testing, color fastness to wash/rubbing, and button pull-tests.</p>
+                    </div>
+                    <div class="qa-item">
+                        <h4><i class="fa-solid fa-box-check"></i> Pre-Shipment Audit</h4>
+                        <p>Final random inspection (FRI) before container packing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=800&auto=format&fit=crop" alt="Quality Inspection" class="qa-banner-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team (Original Photos Preserved) -->
+    <section id="management" class="section" style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+        <div class="section-header">
+            <span class="section-tag">Executive Board</span>
+            <h2>Our Leadership Team</h2>
+            <p class="section-p">
+                Experienced and dedicated professionals driving innovation, quality, and ethical practices at Bandhan Apparel.
+            </p>
+        </div>
+
+        <div class="management-grid">
+            <!-- Chairman -->
+            <div class="team-card">
+                <img src="rakib_chireman.jpg" alt="Rakibul Islam">
+                <h3>Rakibul Islam</h3>
+                <p class="position">Chairman</p>
+                <p class="contact"><span class="contact-icon">📞</span> +88 01706-523268</p>
+                <p class="contact"><span class="contact-icon">✉️</span> rakibulshantu@gmail.com</p>
+            </div>
+            
+            <!-- Managing Director -->
+            <div class="team-card">
+                <img src="ali.png" alt="MD. Namder Ali">
+                <h3>MD. Namder Ali</h3>
+                <p class="position">Managing Director</p>
+                <p class="contact"><span class="contact-icon">📞</span> +88 01601-228017</p>
+                <p class="contact"><span class="contact-icon">✉️</span> bandhanapparelltd@gmail.com</p>
+            </div>
+           
+            <!-- Director -->
+            <div class="team-card">
+                <img src="aliv_v.png" alt="Abdul Halim Khan">
+                <h3>Abdul Halim Khan</h3>
+                <p class="position">Director</p>
+                <p class="contact"><span class="contact-icon">📞</span> +88 01601-228017</p>
+                <p class="contact"><span class="contact-icon">✉️</span> bandhanapparelltd@gmail.com</p>
+            </div>
+            
+            <!-- Head of Marketing -->
+            <div class="team-card">
+                <img src="raju.jpg" alt="Razu">
+                <h3>Razu</h3>
+                <p class="position">Head of Marketing</p>
+                <p class="contact"><span class="contact-icon">📞</span> +88 01949849788</p>
+                <p class="contact"><span class="contact-icon">✉️</span> razurojo@gmail.com</p>
+            </div>
+            
+            <!-- Head of IT -->
+            <div class="team-card">
+                <img src="rajib_hossain.jpg" alt="Rajib Hossain">
+                <h3>Rajib Hossain</h3>
+                <p class="position">Head of IT</p>
+                <p class="contact"><span class="contact-icon">📞</span> +88 01623-473041</p>
+                <p class="contact"><span class="contact-icon">✉️</span> aboutrajibhossainemail@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section (Original Openings Preserved) -->
+    <section id="careers" class="section career-bg">
+        <div class="section-header">
+            <span class="section-tag">Careers</span>
+            <h2>Join Our Team</h2>
+            <p class="section-p">
+                At Bandhan Apparel, we believe our people are our greatest asset. We foster a supportive, inclusive, and growth-oriented environment where talent thrives.
+            </p>
+        </div>
+
+        <div class="openings-grid">
+            <div class="job-card">
+                <h3>Sewing Machine Operator</h3>
+                <p class="location">Mirpur, Dhaka (Factory Floor)</p>
+                <ul>
+                    <li>Operate single/double needle, overlock, flatlock machines</li>
+                    <li>Produce trousers, jackets, shorts with high quality</li>
+                    <li>1-3 years experience preferred (freshers with training welcome)</li>
+                </ul>
+                <button class="apply-btn" onclick="applyJob('Sewing Machine Operator')">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Quality Checker (QC)</h3>
+                <p class="location">Mirpur, Dhaka (Factory Floor)</p>
+                <ul>
+                    <li>Perform in-line and final garment inspection</li>
+                    <li>Check stitching, measurement, finishing & defects</li>
+                    <li>Ensure compliance with buyer AQL standards</li>
+                </ul>
+                <button class="apply-btn" onclick="applyJob('Quality Checker (QC)')">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Apparel Merchandiser</h3>
+                <p class="location">Dhaka, Bangladesh</p>
+                <ul>
+                    <li>Manage buyer communication, costing & order execution</li>
+                    <li>Coordinate with production and sampling teams</li>
+                    <li>3+ years experience in export RMG merchandising</li>
+                </ul>
+                <button class="apply-btn" onclick="applyJob('Apparel Merchandiser')">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>IT Expert / System Administrator</h3>
+                <p class="location">Dhaka, Bangladesh (On-site)</p>
+                <ul>
+                    <li>Manage ERP system, network infrastructure, and servers</li>
+                    <li>Ensure cybersecurity, cloud backups, and hardware health</li>
+                    <li>3+ years experience in IT administration</li>
+                </ul>
+                <button class="apply-btn" onclick="applyJob('IT Expert')">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Pattern Master</h3>
+                <p class="location">Dhaka, Bangladesh</p>
+                <ul>
+                    <li>Create and grade patterns for trousers, shirts & jackets</li>
+                    <li>CAD software and manual patterning expertise</li>
+                    <li>Strong knowledge of fit and construction</li>
+                </ul>
+                <button class="apply-btn" onclick="applyJob('Pattern Master')">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Production Manager</h3>
+                <p class="location">Dhaka, Bangladesh</p>
+                <ul>
+                    <li>Oversee production planning and master line balancing</li>
+                    <li>Optimize line efficiency and minimize wastage</li>
+                    <li>10+ years experience in garments manufacturing</li>
+                </ul>
+                <button class="apply-btn" onclick="applyJob('Production Manager')">Apply Now</button>
+            </div>
+        </div>
+
+        <p style="text-align:center;margin-top:40px;font-size:16px;color:var(--gray);">
+            Don't see a suitable position? Send your CV to <strong>bandhanapparelltd@gmail.com</strong> or call <strong>+88 01601-228017</strong>
+        </p>
+    </section>
+
+    <!-- Sustainability Section (Original Photos Preserved) -->
+    <section id="sustainability" class="section sustainability-bg">
+        <div class="section-header">
+            <span class="section-tag" style="background:#c8e6c9;color:#2e7d32;">Eco-Friendly Production</span>
+            <h2 style="color:#2e7d32;">Our Commitment to Sustainability</h2>
+            <p class="section-p">
+                At Bandhan Apparel, sustainability is at the heart of everything we do. We prioritize eco-friendly practices, ethical labor standards, and responsible manufacturing to create a better future for our planet and people.
+            </p>
+        </div>
+
+        <div class="sustainability-grid">
+            <div class="sustain-card">
+                <img src="https://ddc514qh7t05d.cloudfront.net/dA/589af75e87c94c50da769c06c2d63b5c/2400w/80q" alt="Eco-Friendly Manufacturing">
+                <h3>Eco-Friendly Manufacturing</h3>
+                <p style="color:var(--gray);font-size:14px;">We invest in energy-efficient machinery, water recycling systems, and waste reduction to minimize our environmental footprint.</p>
+            </div>
+
+            <div class="sustain-card">
+                <img src="https://news.europawire.eu/wp-content/uploads/2023/11/BESTSELLER-and-SOLshare-Power-Textile-Factory-in-Bangladesh-with-Rooftop-Solar-System-scaled.jpg" alt="Renewable Energy">
+                <h3>Renewable Energy (Planning...)</h3>
+                <p style="color:var(--gray);font-size:14px;">Utilizing rooftop solar panels and green energy sources to power our operations sustainably.</p>
+            </div>
+
+            <div class="sustain-card">
+                <img src="https://apparelmagic.com/wp-content/uploads/Fashion-ERP-sustainable-materials-scaled.jpg" alt="Sustainable Materials">
+                <h3>Sustainable Materials</h3>
+                <p style="color:var(--gray);font-size:14px;">Incorporating recycled fabrics, organic cotton, and low-impact dyes wherever possible.</p>
+            </div>
+
+            <div class="sustain-card">
+                <img src="https://www.fairtradecertified.org/wp-content/uploads/2025/04/Untitled-2-01-1.jpg" alt="Ethical Workers">
+                <h3>Ethical & Fair Labor</h3>
+                <p style="color:var(--gray);font-size:14px;">Fair wages, safe working conditions, and worker empowerment programs for our employees.</p>
+            </div>
+        </div>
+
+        <div class="certifications-grid">
+            <div class="cert-badge-pill"><i class="fa-solid fa-leaf"></i> GOTS Organic Certified Sourcing</div>
+            <div class="cert-badge-pill"><i class="fa-solid fa-certificate"></i> OEKO-TEX Standard 100</div>
+            <div class="cert-badge-pill"><i class="fa-solid fa-handshake"></i> BSCI Code of Conduct</div>
+            <div class="cert-badge-pill"><i class="fa-solid fa-shield-halved"></i> SEDEX / SMETA Audited</div>
+            <div class="cert-badge-pill"><i class="fa-solid fa-cotton-bureau"></i> BCI (Better Cotton)</div>
+        </div>
+    </section>
+
+    <!-- Submit Tech Pack / RFQ Section -->
+    <section id="rfq" class="rfq-section">
+        <div class="rfq-container">
+            <div class="rfq-info">
+                <span class="section-tag" style="background:rgba(0,170,255,0.2);color:var(--accent);">Request For Quotation</span>
+                <h2>Start Your Next Production with <span>Bandhan Apparel</span></h2>
+                <p>Send us your Tech Pack, design sketches, or target specifications. Our merchandising team will revert with competitive FOB costing, fabric sourcing details, and sample turnaround within 24 hours.</p>
+
+                <ul class="rfq-feature-list">
+                    <li class="rfq-feat">
+                        <div class="rfq-feat-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="rfq-feat-text">
+                            <h4>24-Hour Fast Costing Response</h4>
+                            <p>Direct communication with experienced RMG merchandisers.</p>
+                        </div>
+                    </li>
+                    <li class="rfq-feat">
+                        <div class="rfq-feat-icon"><i class="fa-solid fa-tags"></i></div>
+                        <div class="rfq-feat-text">
+                            <h4>Transparent FOB / CM Pricing</h4>
+                            <p>Competitive quotes for yarn, knitting, dying, washes, and trims.</p>
+                        </div>
+                    </li>
+                    <li class="rfq-feat">
+                        <div class="rfq-feat-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                        <div class="rfq-feat-text">
+                            <h4>7–10 Days Proto Sampling</h4>
+                            <p>Express courier dispatch via DHL/FedEx straight to your office.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="rfq-form-card">
+                <h3>Submit Tech Pack / RFQ</h3>
+                <p class="sub">Fill out the details below or send your order requirements directly.</p>
+
+                <form id="rfqForm" onsubmit="handleRfqSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="buyerName">Your Name *</label>
+                            <input type="text" id="buyerName" class="form-input" placeholder="e.g. Alex Wong" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerCompany">Company / Brand *</label>
+                            <input type="text" id="buyerCompany" class="form-input" placeholder="e.g. Retail Fashion Ltd." required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="buyerEmail">Official Email *</label>
+                            <input type="email" id="buyerEmail" class="form-input" placeholder="alex@brand.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerPhone">WhatsApp / Phone *</label>
+                            <input type="text" id="buyerPhone" class="form-input" placeholder="+88 01... or International" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="garmentDivision">Garment Division *</label>
+                            <select id="garmentDivision" class="form-input" required>
+                                <option value="">Select Category...</option>
+                                <option value="Denim & Bottoms">Denim & Bottoms (Trousers, Shorts)</option>
+                                <option value="Knitwear & Polos">Knitwear (Tees, Polo Shirts)</option>
+                                <option value="Outerwear & Fleece">Outerwear & Fleece (Hoodies, Jackets)</option>
+                                <option value="Woven Shirts & Tops">Woven Shirts & Casual Tops</option>
+                                <option value="Activewear">Activewear & Athleisure</option>
+                                <option value="Kids & Infant Wear">Kids & Infant Wear</option>
+                                <option value="Workwear">Workwear & Uniforms</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderQuantity">Estimated Quantity (Pcs) *</label>
+                            <input type="number" id="orderQuantity" class="form-input" placeholder="e.g. 1000" min="200" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="styleRef">Style Name / Reference</label>
+                        <input type="text" id="styleRef" class="form-input" placeholder="e.g. Heavyweight Fleece Hoodie or Denim Trousers">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="buyerMessage">Fabric Specs, Wash Details & Target Delivery</label>
+                        <textarea id="buyerMessage" class="form-input" placeholder="Describe fabric composition, GSM, target FOB price, or specific delivery schedule..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-rfq">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Quotation Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Phone: <a href="tel:+8801601228017">+88 01601-228017</a> | <a href="tel:+8801706523268">+88 01706-523268</a><br>
+            Email: <a href="mailto:bandhanapparelltd@gmail.com">bandhanapparelltd@gmail.com</a><br>
+            Address: House# 87, Khan Mansion, Kazi office building, 3rd Floor, Pul-par, Ibrahimpur, Kafrul, Mirpur 14, Dhaka, Bangladesh
+        </p>
+
+        <div class="footer-social">
+            <a href="https://wa.me/8801601228017" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:bandhanapparelltd@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+8801601228017" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+
+        <p style="margin-top:30px;font-size:14px;color:#a0c4e8;">
+            &copy; 2026 Bandhan Apparel Ltd. | Committed to Ethical & Sustainable Manufacturing
+        </p>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/8801601228017?text=Hello%20Bandhan%20Apparel,%20I%20am%20interested%20in%20your%20manufacturing%20services" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Technical Specs Modal -->
+    <div class="modal-overlay" id="specsModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Technical Specification Sheet</h3>
+                <button class="modal-close" onclick="closeSpecs()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="modal-table" id="modalTableBody">
+                    <!-- Populated dynamically via JS -->
+                </table>
+                <div style="text-align:right;">
+                    <button class="cta-btn" id="modalInquireBtn" style="padding:10px 24px;font-size:14px;"><i class="fa-solid fa-paper-plane"></i> Inquire This Style</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Navigation Menu Toggle (Mobile)
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        // Close menu on item click for mobile
+        document.querySelectorAll('nav .menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('navMenu');
+                if (window.innerWidth <= 768) {
+                    menu.classList.remove('active');
+                }
+            });
+        });
+
+        // Hero Slider Logic (Automatic 5-second rotation with Dots & Arrows)
+        let heroIndex = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.slider-dot');
+        let heroTimer;
+
+        function showSlide(index) {
+            heroSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (heroDots[i]) heroDots[i].classList.remove('active');
+            });
+            heroIndex = (index + heroSlides.length) % heroSlides.length;
+            heroSlides[heroIndex].classList.add('active');
+            if (heroDots[heroIndex]) heroDots[heroIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(heroIndex + 1);
+            resetHeroTimer();
+        }
+
+        function prevSlide() {
+            showSlide(heroIndex - 1);
+            resetHeroTimer();
+        }
+
+        function setSlide(index) {
+            showSlide(index);
+            resetHeroTimer();
+        }
+
+        function startHeroTimer() {
+            heroTimer = setInterval(() => {
+                showSlide(heroIndex + 1);
+            }, 5000);
+        }
+
+        function resetHeroTimer() {
+            clearInterval(heroTimer);
+            startHeroTimer();
+        }
+
+        startHeroTimer();
+
+        // Product Category Filter
+        function filterCategory(category, btnElement) {
+            document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+            if(btnElement) btnElement.classList.add('active');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Product Tech Specs Database
+        const specsData = {
+            'denim-mens': {
+                title: "Denim & Non-Denim Trousers",
+                category: "Denim & Bottoms",
+                data: [
+                    ["Fabric Composition", "98% Combed Cotton, 2% Elastane Spandex"],
+                    ["Fabric Construction", "3/1 Right-Hand Twill, Ring x Ring Denim"],
+                    ["Weight / Density", "12.50 – 13.50 Oz"],
+                    ["Available Washes", "Enzyme Stone, Acid Wash, Whisker, Hand Sanding, Tinting"],
+                    ["Seam Construction", "Triple-needle back rise, Chain-stitched waistband"],
+                    ["Trims & Hardware", "Antiqued Brass YKK Zipper, Branded Rivets & Shank Button"],
+                    ["Size Grading", "Waist 28 to 42 (Inseam 30, 32, 34) - US/EU Standard"],
+                    ["MOQ", "800 Pcs per colorway / style"],
+                    ["Production Lead Time", "Proto Sample: 7 Days | Bulk: 45–60 Days"]
+                ]
+            },
+            'denim-jacket': {
+                title: "Denim & Twill Jackets",
+                category: "Denim & Bottoms",
+                data: [
+                    ["Fabric Composition", "100% Rigid Ring Spun Cotton Denim / Twill"],
+                    ["Fabric Weight", "13.50 – 14.50 Oz Heavyweight"],
+                    ["Finishing", "Vintage Stonewash, Enzyme Wash, Bleach Effect"],
+                    ["Construction", "Double-stitched chest flap pockets, waist adjusters"],
+                    ["Hardware", "Heavy-gauge engraved metal shank buttons"],
+                    ["MOQ", "600 Pcs per style"]
+                ]
+            },
+            'fleece-hoodie': {
+                title: "Fleece & Heavy Hoodies",
+                category: "Outerwear & Fleece",
+                data: [
+                    ["Fabric Composition", "80% Combed Cotton, 20% Anti-Pill Polyester"],
+                    ["Fabric Structure", "3-End Brushed Fleece, French Terry or Diagonal Loop"],
+                    ["Fabric Weight", "320 – 360 GSM"],
+                    ["Finishing", "Enzyme Peach Skin, Silicone Softener, Pre-Shrunk"],
+                    ["Hood Construction", "Double-layered 3-panel hood with dyed-to-match flat drawcords"],
+                    ["Pocket", "Kangaroo pocket with reinforced bartacks"],
+                    ["Size Range", "XS to 3XL (European & American sizing)"],
+                    ["MOQ", "500 Pcs per colorway"],
+                    ["Inspection Benchmark", "AQL 1.5 Standard"]
+                ]
+            },
+            'jogging-set': {
+                title: "Jogging & Pajama Sets",
+                category: "Activewear",
+                data: [
+                    ["Fabric Composition", "100% Combed French Terry / 95% Cotton 5% Spandex"],
+                    ["Fabric Weight", "240 – 280 GSM"],
+                    ["Finishing", "Bio-wash with silicon softener for ultra soft handfeel"],
+                    ["Waistband", "Encased elastic with eyelets and round drawcord"],
+                    ["Cuffs", "Ribbed bottom cuffs for tapered athletic fit"],
+                    ["MOQ", "600 Sets per style"]
+                ]
+            },
+            'polo-shirt': {
+                title: "Mercerized Pique Polo Shirt",
+                category: "Knitwear & Polos",
+                data: [
+                    ["Fabric Composition", "100% Combed Compact Cotton"],
+                    ["Knit Type", "Classic Honeycomb Pique / Interlock"],
+                    ["Weight / GSM", "220 – 240 GSM"],
+                    ["Collar & Cuffs", "1x1 Jacquard Anti-Curl Rib collar"],
+                    ["Placket", "Reinforced box placket with 2 or 3 pearl buttons"],
+                    ["Color Fastness", "Grade 4+ to washing & rubbing"],
+                    ["MOQ", "600 Pcs per style"]
+                ]
+            },
+            'chino-pants': {
+                title: "Stretch Twill Chino Trousers",
+                category: "Denim & Bottoms",
+                data: [
+                    ["Fabric Composition", "98% Cotton, 2% Elastane Spandex"],
+                    ["Weave", "Fine Combed 3/1 Twill"],
+                    ["Fabric Weight", "240 – 260 GSM (7.5 Oz)"],
+                    ["Finishing & Dyeing", "Garment Enzyme Washed, Reactive Piece Dyed"],
+                    ["Pockets", "Double-welt back pockets with horn buttons"],
+                    ["MOQ", "800 Pcs per colorway"]
+                ]
+            },
+            'flannel-shirt': {
+                title: "Yarn-Dyed Plaid Flannel Casual Shirt",
+                category: "Woven Shirts & Tops",
+                data: [
+                    ["Fabric Composition", "100% Long-Staple Cotton"],
+                    ["Weave", "Twill Flannel, Double Sided Brushed"],
+                    ["Fabric Weight", "175 – 195 GSM"],
+                    ["Pattern", "Custom Yarn-Dyed Tartan / Plaid Match"],
+                    ["Collar & Yoke", "Button-down casual collar with double-layer back yoke"],
+                    ["MOQ", "600 Pcs per pattern"]
+                ]
+            },
+            'baby-romper': {
+                title: "Organic Cotton Baby Rompers",
+                category: "Kids & Infant Wear",
+                data: [
+                    ["Fabric Composition", "100% Certified Organic Cotton (GOTS)"],
+                    ["Knit Type", "Super-soft 40s/1 Combed Interlock"],
+                    ["Weight", "180 – 200 GSM"],
+                    ["Hardware", "Nickel-free, lead-free Prym snap fasteners"],
+                    ["Safety Standards", "OEKO-TEX Class 1 (Safe for Infant Skin)"],
+                    ["MOQ", "800 Pcs per style"]
+                ]
+            },
+            'workwear-cargo': {
+                title: "Heavy-Duty Industrial Cargo Trousers",
+                category: "Workwear",
+                data: [
+                    ["Fabric Composition", "65% High-Tenacity Polyester, 35% Cotton Drill"],
+                    ["Fabric Weight", "290 – 310 GSM Heavy Weight"],
+                    ["Reinforcement", "500D Cordura Knee-pad pockets & hem guard"],
+                    ["Stitching", "Triple-needle felled safety seams with 42 bartacks"],
+                    ["MOQ", "500 Pcs per style"]
+                ]
+            },
+            'crewneck-tee': {
+                title: "Combed Cotton Crewneck Tee",
+                category: "Knitwear & Polos",
+                data: [
+                    ["Fabric Composition", "100% Combed Compact Ring-Spun Cotton"],
+                    ["Weight / GSM", "160 – 180 GSM (Bio-Silicon Washed)"],
+                    ["Neck Rib", "1x1 Cotton Spandex 220 GSM Rib with shoulder tape"],
+                    ["Shrinkage", "Less than 3.5% L x W"],
+                    ["MOQ", "800 Pcs per colorway"]
+                ]
+            },
+            'denim-womens': {
+                title: "Women's Sculpt Stretch Jeans",
+                category: "Denim & Bottoms",
+                data: [
+                    ["Fabric Composition", "85% Cotton, 13% Modal, 2% High-Recovery Elastane"],
+                    ["Weight", "11.25 – 11.75 Oz Super Stretch Denim"],
+                    ["Wash Finish", "Laser whisker, Eco-Ozone wash, Hand sanding"],
+                    ["MOQ", "800 Pcs per style"]
+                ]
+            },
+            'puffer-jacket': {
+                title: "Lightweight Packable Puffer",
+                category: "Outerwear & Fleece",
+                data: [
+                    ["Shell Material", "100% Recycled Nylon Taffeta 380T (DWR)"],
+                    ["Filling / Insulation", "100% Polyester Faux-Down (120 GSM)"],
+                    ["Zippers", "YKK Reverse Coil Water-Resistant Zips"],
+                    ["MOQ", "500 Pcs per colorway"]
+                ]
+            }
+        };
+
+        // Open Tech Specs Modal
+        function openSpecs(key) {
+            const spec = specsData[key];
+            if (!spec) return;
+
+            document.getElementById('modalTitle').innerText = spec.title;
+            const table = document.getElementById('modalTableBody');
+            table.innerHTML = '';
+
+            spec.data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<th>${row[0]}</th><td>${row[1]}</td>`;
+                table.appendChild(tr);
+            });
+
+            const inquireBtn = document.getElementById('modalInquireBtn');
+            inquireBtn.onclick = function() {
+                closeSpecs();
+                inquireProduct(spec.title, spec.category);
+            };
+
+            document.getElementById('specsModal').classList.add('active');
+        }
+
+        function closeSpecs() {
+            document.getElementById('specsModal').classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('specsModal');
+            if (event.target === modal) {
+                closeSpecs();
+            }
+        };
+
+        // Pre-fill RFQ Form on Inquire
+        function inquireProduct(productName, categoryName) {
+            const rfqSection = document.getElementById('rfq');
+            rfqSection.scrollIntoView({ behavior: 'smooth' });
+
+            const categorySelect = document.getElementById('garmentDivision');
+            if (categorySelect) {
+                for (let i = 0; i < categorySelect.options.length; i++) {
+                    if (categorySelect.options[i].text.toLowerCase().includes(categoryName.toLowerCase())) {
+                        categorySelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            const styleInput = document.getElementById('styleRef');
+            if (styleInput) {
+                styleInput.value = productName;
+            }
+        }
+
+        // Apply Job Trigger
+        function applyJob(jobTitle) {
+            const rfq = document.getElementById('rfq');
+            rfq.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('styleRef').value = `Job Application: ${jobTitle}`;
+            document.getElementById('buyerMessage').value = `I am applying for the position of ${jobTitle}. My qualifications and contact are...`;
+            alert(`Applying for: ${jobTitle}\nPlease fill in your details below or email your CV directly to bandhanapparelltd@gmail.com`);
+        }
+
+        // Handle RFQ Form Submission
+        function handleRfqSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('buyerName').value;
+            const company = document.getElementById('buyerCompany').value;
+            const email = document.getElementById('buyerEmail').value;
+            const phone = document.getElementById('buyerPhone').value;
+            const category = document.getElementById('garmentDivision').value;
+            const qty = document.getElementById('orderQuantity').value;
+            const style = document.getElementById('styleRef').value;
+            const msg = document.getElementById('buyerMessage').value;
+
+            const waText = encodeURIComponent(
+                `*New RFQ from Bandhan Apparel Ltd Website*\n\n` +
+                `*Buyer:* ${name}\n` +
+                `*Company:* ${company}\n` +
+                `*Email:* ${email}\n` +
+                `*Phone:* ${phone}\n` +
+                `*Category:* ${category}\n` +
+                `*Target Quantity:* ${qty} pcs\n` +
+                `*Style/Ref:* ${style}\n` +
+                `*Notes:* ${msg}`
+            );
+
+            const directWhatsAppUrl = `https://wa.me/8801601228017?text=${waText}`;
+
+            if (confirm("Thank you for your RFQ submission!\n\nWould you like to send this inquiry directly to our Merchandising Team via WhatsApp for immediate 24/7 assistance?")) {
+                window.open(directWhatsAppUrl, '_blank');
+            } else {
+                alert(`Thank you ${name}! Your inquiry for ${qty} pcs has been received. Our team will contact you at ${email} shortly.`);
+            }
+
+            document.getElementById('rfqForm').reset();
+        }
+    </script>
+</body>
+</html>
